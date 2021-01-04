@@ -13,7 +13,7 @@ ReactDOM.render(
     <div className="container">
       <h1>React Calculator</h1>
       <Calculator />
-      <h3>Pistório</h3>
+      <h3><a href="https://github.com/pistorio3" target="_blank" rel="noreferrer">Pistório</a></h3>
       <FontAwesomeIcon icon={faReact} size="lg"/>
     </div>
   </React.StrictMode>,

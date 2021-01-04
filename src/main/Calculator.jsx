@@ -27,6 +27,10 @@ export default class Calculator extends Component {
       this.addDigit = this.addDigit.bind(this)
     }
 
+    countDigits(number) {
+      
+    }
+
     clearMemory() {
       this.setState({ ...initialState })
       digits = 0;
@@ -47,11 +51,34 @@ export default class Calculator extends Component {
           break;
 
           case '÷':
-            values[0] = values[0] / values[1]
+            if(values[1] !== 0) {
+              values[0] = values[0] / values[1]
+
+              var sp = (values[0] + '').split('.');
+              if (sp[1] !== undefined) {
+                var flag = sp[1].length;
+              }
+              
+              if(flag >= 10) {
+                values[0] = values[0].toFixed(4) + "..."
+              }
+        
+            } else {
+              values[0] = "Math Error"
+            }
           break;
 
           case '+':
             values[0] = values[0] + values[1]
+
+            var sp2 = (values[0] + '').split('.');
+              if (sp2[1] !== undefined) {
+                var flag2 = sp2[1].length;
+              }
+              
+              if(flag2 >= 4) {
+                values[0] = values[0].toFixed(4)
+              }
           break;
 
           case '-':
