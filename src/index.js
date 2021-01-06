@@ -5,7 +5,6 @@ import { faReact } from '@fortawesome/free-brands-svg-icons'
 import './index.css';
 
 import Calculator from './main/Calculator';
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 
@@ -21,4 +20,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-reportWebVitals();
+
